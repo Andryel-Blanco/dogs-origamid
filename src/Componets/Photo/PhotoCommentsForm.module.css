@@ -1,0 +1,71 @@
+@keyframes latir {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: stretch;
+
+    margin: 1rem;
+}
+
+.single.form{
+    margin: 1rem;
+}
+
+.textarea{
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #eee;
+    border-radius: .2rem;
+    padding: .5rem;
+    
+    font-size: 1rem;
+    font-family: var(--type-first);
+
+    transition: .5s;
+    resize: none;
+}
+
+.textarea:focus,
+.textarea:hover{
+
+    border-color: #fb1;
+    background: #FFF;
+    
+    outline: none;
+    box-shadow: 0 0 0 3px #fea;
+}
+
+.button{
+    color: #333;
+    background: transparent;
+    
+    border: none;
+    padding: 0 1rem;
+
+    font-size: 1rem;
+    
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.button:focus svg path,
+.button:hover svg path{
+    fill: #fea;
+    stroke: #fb1;
+}
+
+.button:focus svg g,
+.button:hover svg g{
+    animation: latir .6s infinite;
+}
